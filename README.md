@@ -13,3 +13,5 @@ Please see the following:
 - [Java JCE/JCA(JSP) TBD](JSP/README-JSP.md)
 - [Java PKCS#11(JCPROV) TBD](JCPROV/README-JCPROV.md)
 
+# Contact :
+thales-crypto@thalesgroup.com

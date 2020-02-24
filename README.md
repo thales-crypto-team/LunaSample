@@ -1,5 +1,4 @@
-# LunaSample
-How to use the Luna HSM via the Client and Various Language APIs
+# How to use the Luna HSM via the Client and Various Language APIs
 
 There are a few ways to interact with the Luna HSM/DPoD.
 

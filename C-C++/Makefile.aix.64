@@ -1,0 +1,15 @@
+CC = /usr/vacpp/bin/xlC_r -q64 -qstaticinline -qcpluscmt
+CFLAGS=-DUNIX -DOS_UNIX -Iinclude
+LINKFLAGS=-ldl
+SRCS=source/main.c
+OBJS=${SRCS:.c=.o}
+
+p11Sample : clean $(OBJS)
+	$(CC) -o p11Sample $(OBJS) $(LINKFLAGS) $(LIBS)
+
+.c.o :
+	$(CC) $(CFLAGS) -c $< -o $@
+	
+clean :
+		rm -f p11Sample $(OBJS)
+

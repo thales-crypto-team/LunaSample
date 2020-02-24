@@ -1,0 +1,43 @@
+#
+#This file describes the domain parameters of an EC curve
+#
+#File contains lines of text. All lines not of the form key=value are ignored.
+#All values must be Hexidecimal numbers except m, k, k1, k2 and k3 which are decimal.
+#Lines starting with '#' are comments.
+#
+#Keys recognised for fieldID values are -
+#p               - only if the Curve is based on a prime field
+#m               - only if the curve is based on a 2^M field
+#k1, k2, k3      - these three only if 2^M field
+#
+#You should have these combinations of fieldID values -
+#p          - if Curve is based on a prime field
+#m,k1,k2,k3 - if curve is based on 2^M
+#
+#These are the values common to prime fields and polynomial fields.
+#a          - field element A
+#b          - field element B
+#s          - seed for curve - this one is optional
+#x          - field element Xg of the point G
+#y          - field element Yg of the point G
+#q          - order n of the point G
+#h          - (optional) cofactor h
+#
+#
+
+# curve secp384r1 SECG/NIST recommended curve over a 384 bit prime field
+
+p=FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFF
+  FFF0000000000000000FFFFFFFF
+a=FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFF
+  FFF0000000000000000FFFFFFFC
+b=B3312FA7E23EE7E4988E056BE3F82D19181D9C6EFE8141120314088F5013875AC6563
+  98D8A2ED19D2A85C8EDD3EC2AEF
+x=AA87CA22BE8B05378EB1C71EF320AD746E1D3B628BA79B9859F741E082542A385502F
+  25DBF55296C3A545E3872760AB7
+y=3617de4a96262c6f5d9e98bf9292dc29f8f41dbd289a147ce9da3113b5f0b8c00a60b
+  1ce1d7e819d7a431d7c90ea0e5f
+q=FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC7634D81F4372DDF581A0
+  DB248B0A77AECEC196ACCC52973
+h=1
+s=A335926AA319A27A1D00896A6773A4827ACDAC73

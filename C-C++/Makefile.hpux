@@ -1,0 +1,20 @@
+
+CFLAGS=-DUNIX -DOS_UNIX -DOS_HPUX -DLUNA_BIG_ENDIAN -D_THREAD_SAFE -D_REENTRANT -DUSE_PTHREADS
+
+LINKFLAGS=
+#SLIB=
+SLIB=
+cc = aCC -c -mt +Z
+link = aCC
+
+p11Sample :	    main.o
+
+		$(link) main.o $(LINKFLAGS) $(SLIB) -o p11Sample
+
+main.o : main.c
+		$(cc) -c $(CFLAGS) main.c
+	
+clean :
+		rm -f p11Sample *.o
+
+#eof

@@ -1,0 +1,34 @@
+# Makefile : 
+
+INCL = /I "C:\Program Files\Microsoft SDK\Include" /I include
+
+OBJS = .\Release32\main.obj
+      
+       
+# List all compiler options common to both debug and final
+# versions of your code here:
+CLFLAGS = /c /W3 /D "WIN32" /D "_WINDOWS" /Gd /TP /MT /Fo".\Release32/" \
+         /FD /EHsc /nologo /Zi /D "_CRT_SECURE_NO_DEPRECATE" /D "OS_WIN32" 
+
+# List all linker options common to both debug and final
+# versions of your code here:
+            
+LINKFLAGS = /OUT:".\Release32\p11Sample.exe" /NOLOGO /STACK:32768 \
+           /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /MACHINE:X86 /ERRORREPORT:PROMPT 
+            
+            
+p11Sample.exe: create_dir clean $(OBJS)
+    link $(LINKFLAGS) @<<
+$(OBJS)
+<<
+
+clean: 
+    -del $(OBJS) .\Release32\p11Sample.exe
+
+create_dir: 
+    if not exist Release32 mkdir Release32
+    
+# Compile 
+.\Release32\main.obj  : source\main.c
+    $(CPP) $(CLFLAGS) $(INCL)  source\main.c
+

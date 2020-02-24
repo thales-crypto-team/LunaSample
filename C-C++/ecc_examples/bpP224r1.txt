@@ -1,0 +1,36 @@
+#
+#This file describes the domain parameters of an EC curve
+#
+#File contains lines of text. All lines not of the form key=value are ignored.
+#All values must be Hexidecimal numbers except m, k, k1, k2 and k3 which are decimal.
+#Lines starting with '#' are comments.
+#
+#Keys recognised for fieldID values are -
+#p               - only if the Curve is based on a prime field
+#m               - only if the curve is based on a 2^M field
+#k1, k2, k3      - these three only if 2^M field
+#
+#You should have these combinations of fieldID values -
+#p          - if Curve is based on a prime field
+#m,k1,k2,k3 - if curve is based on 2^M
+#
+#These are the values common to prime fields and polynomial fields.
+#a          - field element A
+#b          - field element B
+#s          - seed for curve - this one is optional
+#x          - field element Xg of the point G
+#y          - field element Yg of the point G
+#q          - order n of the point G
+#h          - (optional) cofactor h
+#
+#
+
+# curve BrainpoolP224R1
+
+p=D7C134AA264366862A18302575D1D787B09F075797DA89F57EC8C0FF
+a=68A5E62CA9CE6C1C299803A6C1530B514E182AD8B0042A59CAD29F43
+b=2580F63CCFE44138870713B1A92369E33E2135D266DBB372386C400B
+x=D9029AD2C7E5CF4340823B2A87DC68C9E4CE3174C1E6EFDEE12C07D
+y=58AA56F772C0726F24C6B89E4ECDAC24354B9E99CAA3F6D3761402CD
+q=D7C134AA264366862A18302575D0FB98D116BC4B6DDEBCA3A5A7939F
+h=1

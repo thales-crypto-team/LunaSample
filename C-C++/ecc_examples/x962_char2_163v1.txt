@@ -1,0 +1,40 @@
+#
+#This file describes the domain parameters of an EC curve
+#
+#File contains lines of text. All lines not of the form key=value are ignored.
+#All values must be Hexidecimal numbers except m, k, k1, k2 and k3 which are decimal.
+#Lines starting with '#' are comments.
+#
+#Keys recognised for fieldID values are -
+#p               - only if the Curve is based on a prime field
+#m               - only if the curve is based on a 2^M field
+#k1, k2, k3      - these three only if 2^M field
+#
+#You should have these combinations of fieldID values -
+#p          - if Curve is based on a prime field
+#m,k1,k2,k3 - if curve is based on 2^M
+#
+#These are the values common to prime fields and polynomial fields.
+#a          - field element A
+#b          - field element B
+#s          - seed for curve - this one is optional
+#x          - field element Xg of the point G
+#y          - field element Yg of the point G
+#q          - order n of the point G
+#h          - (optional) cofactor h
+#
+#
+
+# Curve: X9_62_CHAR2_163V1 163 bit binary curve from the X9.62 draft
+
+m=163
+k1=1
+k2=2
+k3=8
+a=072546B5435234A422E0789675F432C89435DE5242
+b=00C9517D06D5240D3CFF38C74B20B6CD4D6F9DD4D9
+x=07AF69989546103D79329FCC3D74880F33BBE803CB
+y=01EC23211B5966ADEA1D3F87F7EA5848AEF0B7CA9F
+q=0400000000000000000001E60FC8821CC74DAEAFC1
+h=2
+s=D2C0FB15760860DEF1EEF4D696E6768756151754
